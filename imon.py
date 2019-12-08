@@ -16,7 +16,7 @@ __author__ = 'Sean Begley'
 __copyright__ = "Copyright 2019, Sean Begley"
 
 __license__ = "GPLv3"
-__version__ = '0.1'
+__version__ = '0.2'
 __maintainer__ = "Sean Begley"
 __email__ = "begleysm@gmail.com"
 __status__ = "Development"
@@ -36,12 +36,13 @@ class IMonUi(QMainWindow):
         self.setWindowTitle('imon: Image Monitor')
         self.setMinimumSize(1024, 768)
         self.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Ignored)
-        self.setWindowIcon(QIcon('default.png'))
+        self.setWindowIcon(QIcon('icon.ico'))
 
         # create variables
         self.watchdir = ''
         self.image_types = ('*.bmp', '*.gif', '*jpg', '*.jpeg', '*.png', '*.pbm', '*.pgm', '*.ppm', '*.xbm', '*.xpm',
-                            '*.svg')
+                            '*.svg', '*.BMP', '*.GIF', '*JPG', '*.JPEG', '*.PNG', '*.PBM', '*.PGM', '*.PPM', '*.XBM',
+                            '*.XPM', '*.SVG')
         self.wasMaximized = True
 
         # create border widgets
